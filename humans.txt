@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: Taha Rezaei
+Website: https://itstaha.ir
+GitHub: https://github.com/taharezaeidev-afk
+LinkedIn: https://linkedin.com/in/taharezaei
+Location: Iran, Khorasan Razavi, Quchan
+
+/* THANKS */
+Font: Ray (Custom)
+Icons: Custom SVG icons
+Libraries: GSAP, ScrollTrigger, Typed.js
+
+/* SITE */
+Last Update: 2026
+Languages: English, Persian (Farsi)
+Theme: Dark / Light

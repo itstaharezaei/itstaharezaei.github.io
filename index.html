@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+        />
+        <title>Taha Rezaei | Backend Architect & Systems Engineer</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+            rel="stylesheet"
+        />
+        
+        <!-- Vendor JS -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    </head>
+    <body>
+        <div class="cursor-glow" id="cursorGlow"></div>
+
+        <!-- ===== SVG BACKGROUND PARTICLES ===== -->
+        <div class="bg-particles" id="bgParticles">
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="3" fill="#3b82f6" opacity="0.90" class="particle p1" />
+                <circle cx="350" cy="100" r="2.5" fill="#60a5fa" opacity="0.10" class="particle p2" />
+                <circle cx="550" cy="200" r="4" fill="#8b5cf6" opacity="0.08" class="particle p3" />
+                <circle cx="750" cy="120" r="2.5" fill="#3b82f6" opacity="0.10" class="particle p4" />
+                <circle cx="950" cy="180" r="3" fill="#60a5fa" opacity="0.08" class="particle p5" />
+                <circle cx="1050" cy="300" r="2.5" fill="#8b5cf6" opacity="0.10" class="particle p6" />
+                <circle cx="200" cy="400" r="3" fill="#3b82f6" opacity="0.08" class="particle p7" />
+                <circle cx="400" cy="500" r="4" fill="#60a5fa" opacity="0.06" class="particle p8" />
+                <circle cx="600" cy="350" r="2.5" fill="#8b5cf6" opacity="0.10" class="particle p9" />
+                <circle cx="800" cy="450" r="3" fill="#3b82f6" opacity="0.08" class="particle p10" />
+                <circle cx="1000" cy="550" r="2.5" fill="#60a5fa" opacity="0.06" class="particle p11" />
+                <circle cx="300" cy="650" r="3" fill="#8b5cf6" opacity="0.08" class="particle p12" />
+                <circle cx="500" cy="700" r="2.5" fill="#3b82f6" opacity="0.06" class="particle p13" />
+                <circle cx="700" cy="600" r="3" fill="#60a5fa" opacity="0.08" class="particle p14" />
+                <circle cx="900" cy="700" r="2.5" fill="#8b5cf6" opacity="0.06" class="particle p15" />
+                <line x1="150" y1="150" x2="350" y2="100" stroke="#3b82f6" stroke-width="0.4" opacity="0.90" class="line l1" />
+                <line x1="350" y1="100" x2="550" y2="200" stroke="#60a5fa" stroke-width="0.4" opacity="0.05" class="line l2" />
+                <line x1="550" y1="200" x2="750" y2="120" stroke="#8b5cf6" stroke-width="0.4" opacity="0.05" class="line l3" />
+                <line x1="750" y1="120" x2="950" y2="180" stroke="#3b82f6" stroke-width="0.4" opacity="0.05" class="line l4" />
+                <line x1="950" y1="180" x2="1050" y2="300" stroke="#60a5fa" stroke-width="0.4" opacity="0.05" class="line l5" />
+                <line x1="200" y1="400" x2="400" y2="500" stroke="#8b5cf6" stroke-width="0.4" opacity="0.05" class="line l6" />
+                <line x1="400" y1="500" x2="600" y2="350" stroke="#3b82f6" stroke-width="0.4" opacity="0.05" class="line l7" />
+                <line x1="600" y1="350" x2="800" y2="450" stroke="#60a5fa" stroke-width="0.4" opacity="0.05" class="line l8" />
+                <line x1="800" y1="450" x2="1000" y2="550" stroke="#8b5cf6" stroke-width="0.4" opacity="0.05" class="line l9" />
+                <line x1="300" y1="650" x2="500" y2="700" stroke="#3b82f6" stroke-width="0.4" opacity="0.05" class="line l10" />
+                <line x1="500" y1="700" x2="700" y2="600" stroke="#60a5fa" stroke-width="0.4" opacity="0.05" class="line l11" />
+                <line x1="700" y1="600" x2="900" y2="700" stroke="#8b5cf6" stroke-width="0.4" opacity="0.05" class="line l12" />
+                <circle cx="250" cy="250" r="6" fill="none" stroke="#3b82f6" stroke-width="0.6" opacity="0.90" class="ring r1" />
+                <circle cx="750" cy="350" r="8" fill="none" stroke="#60a5fa" stroke-width="0.6" opacity="0.04" class="ring r2" />
+                <circle cx="450" cy="550" r="10" fill="none" stroke="#8b5cf6" stroke-width="0.6" opacity="0.03" class="ring r3" />
+                <circle cx="850" cy="650" r="6" fill="none" stroke="#3b82f6" stroke-width="0.6" opacity="0.04" class="ring r4" />
+            </svg>
+        </div>
+
+        <!-- DESKTOP HEADER -->
+        <div class="header-wrapper" id="stickyHeader">
+            <div class="container-header">
+                <div class="logo" id="logoText">Taha Rezaei</div>
+                <div class="nav-menu">
+                    <a data-section="hero" id="navHome">Home</a>
+                    <a data-section="about" id="navAbout">About</a>
+                    <a data-section="skills" id="navSkills">Skills</a>
+                    <a data-section="services" id="navServices">Services</a>
+                    <a data-section="experience" id="navExperience">Experience</a>
+                    <a data-section="contact" id="navContact">Contact</a>
+                    <div class="lang-switch">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="fa">FA</button>
+                    </div>
+                    <div class="theme-switch-wrapper">
+                        <button class="theme-btn" id="themeToggle">
+                            <span class="theme-icon" id="themeIcon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE HEADER -->
+        <div class="mobile-header">
+            <div class="mobile-logo" id="mobileLogoText">Taha Rezaei</div>
+            <div class="mobile-right">
+                <div class="theme-switch-wrapper">
+                    <button class="theme-btn" id="mobileThemeToggle">
+                        <span class="theme-icon" id="mobileThemeIcon"></span>
+                    </button>
+                </div>
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-nav">
+                <a data-section="hero" id="mobileNavHome">Home</a>
+                <a data-section="about" id="mobileNavAbout">About</a>
+                <a data-section="skills" id="mobileNavSkills">Skills</a>
+                <a data-section="services" id="mobileNavServices">Services</a>
+                <a data-section="experience" id="mobileNavExperience">Experience</a>
+                <a data-section="contact" id="mobileNavContact">Contact</a>
+            </div>
+            <div class="sidebar-footer">
+                <div class="lang-switch" id="sidebarLangSwitch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="fa">FA</button>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+
+        <main class="main-container">
+            <!-- HERO SECTION -->
+            <div class="hero" id="heroSection">
+                <div class="hero-left">
+                    <div class="typed-title" id="heroTitle">Taha Rezaei</div>
+                    <div class="contact-info-row" id="contactInfoRow">
+                        <div class="info-item">
+                            <span class="info-icon" style="background-image: url('icons/email.svg');"></span>
+                            <span id="contactEmailText">taha.rezaei.dev@gmail.com</span>
+                        </div>
+                        <span class="info-divider"></span>
+                        <div class="info-item">
+                            <span class="info-icon" style="background-image: url('icons/location.svg');"></span>
+                            <span id="contactLocationText">Iran, Khorasan Razavi, Quchan</span>
+                        </div>
+                    </div>
+                    <div class="typed-wrapper">
+                        <span id="typedString"></span>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="hero-btn download" id="downloadCvBtn">
+                            <span class="btn-icon" style="background-image: url('icons/download.svg');"></span>
+                            <span id="downloadCvText">Download CV</span>
+                        </button>
+                        <button class="hero-btn contact" id="contactMeBtn">
+                            <span class="btn-icon" style="background-image: url('icons/contact.svg');"></span>
+                            <span id="contactMeText">Contact Me</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-right" id="heroImageContainer">
+                    <img class="hero-image" src="images/hero.webp" alt="Taha Rezaei" onerror="this.src='https://placehold.co/600x400/1e293b/3b82f6?text=Taha+Rezaei'" />
+                </div>
+            </div>
+
+            <!-- ABOUT SECTION -->
+            <div class="about-section" id="aboutSection">
+                <div class="about-title" id="aboutTitle">
+                    <span class="section-icon" style="background-image: url('icons/about.svg');"></span>
+                    <span>About Me</span>
+                </div>
+                <div class="about-content-new">
+                    <div class="about-texts-wrapper">
+                        <div class="about-line"></div>
+                        <div class="about-texts">
+                            <div class="about-text" id="aboutText1">
+                                I'm a backend architect who refuses to stay on the surface. I deeply understand event loops, race conditions, and defense in depth. I don't just write code — I build resilient systems.
+                            </div>
+                            <div class="about-text" id="aboutText2">
+                                Currently diving deep into blockchain security, smart contract auditing, and consensus mechanisms. Always curious, always building.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <div class="rotating-border">
+                            <img class="about-image" src="images/profile.webp" alt="Taha Rezaei" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SKILLS SECTION -->
+            <div class="skills-section" id="skillsSection">
+                <div class="skills-title" id="skillsTitle">
+                    <span class="section-icon" style="background-image: url('icons/technical.svg');"></span>
+                    <span>Technical Arsenal</span>
+                </div>
+                <div class="skills-grid" id="skillsGrid"></div>
+                <div class="slider-nav" id="skillsSliderNav"></div>
+            </div>
+
+            <!-- SERVICES SECTION -->
+            <div class="services-section" id="servicesSection">
+                <div class="services-header">
+                    <div class="services-title" id="servicesTitle">
+                        <span class="section-icon" style="background-image: url('icons/services.svg');"></span>
+                        <span>Services</span>
+                    </div>
+                </div>
+                <div class="services-divider-top"></div>
+                <div class="services-slider-wrapper">
+                    <div class="services-slider" id="servicesSlider"></div>
+                </div>
+                <div class="services-divider-bottom"></div>
+            </div>
+
+            <!-- EXPERIENCE SECTION -->
+            <div class="experience-section" id="experienceSection">
+                <div class="experience-title" id="experienceTitle">
+                    <span class="section-icon" style="background-image: url('icons/experience.svg');"></span>
+                    <span>Experience & Projects</span>
+                </div>
+                <div class="timeline" id="timelineContainer"></div>
+                <button class="show-more-btn" id="showMoreBtn">
+                    <span class="btn-icon" id="btnIcon" style="background-image: url('icons/chevron-down.svg');"></span>
+                    <span id="btnText">Show More</span>
+                </button>
+            </div>
+
+            <!-- CONTACT SECTION -->
+            <div class="contact-wrapper" id="contactSection">
+                <div class="contact-section-title" id="contactSectionTitle">
+                    <span class="section-icon" style="background-image: url('icons/connect.svg');"></span>
+                    <span>Contact</span>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-grid">
+                        <div class="contact-form-side">
+                            <div class="contact-form">
+                                <form id="contactForm">
+                                    <div class="form-group">
+                                        <input style="margin-bottom:10px" type="text" name="name" id="contactNameInput" placeholder="Your name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input style="margin-bottom:10px" type="email" name="email" id="contactEmailInput" placeholder="Your email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" id="contactMessageInput" placeholder="Your message..." required></textarea>
+                                    </div>
+                                    <button class="submit-btn" id="sendMessageBtn" type="button">Send Message →</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="contact-pattern-side">
+                            <div class="social-buttons">
+                                <a href="#" class="social-btn" id="githubBtn">
+                                    <span class="social-icon" style="background-image: url('icons/github.svg');"></span> GitHub
+                                </a>
+                                <a href="#" class="social-btn" id="linkedinBtn">
+                                    <span class="social-icon" style="background-image: url('icons/linkedin.svg');"></span> LinkedIn
+                                </a>
+                                <a href="#" class="social-btn" id="telegramBtn">
+                                    <span class="social-icon" style="background-image: url('icons/telegram.svg');"></span> Telegram
+                                </a>
+                                <a href="#" class="social-btn" id="instagramBtn">
+                                    <span class="social-icon" style="background-image: url('icons/instagram.svg');"></span> Instagram
+                                </a>
+                            </div>
+                            <div class="copy-field">
+                                <span id="websiteLink">https://itstaha.ir</span>
+                                <button class="copy-btn" id="copyLinkBtn">
+                                    <span class="copy-icon" style="background-image: url('icons/copy.svg');"></span> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-contact-box">
+                    <div class="mobile-social-buttons">
+                        <a href="#" class="mobile-social-btn" id="mobileGithubBtn">
+                            <span class="mobile-social-icon" style="background-image: url('icons/github.svg');"></span> GitHub
+                        </a>
+                        <a href="#" class="mobile-social-btn" id="mobileLinkedinBtn">
+                            <span class="mobile-social-icon" style="background-image: url('icons/linkedin.svg');"></span> LinkedIn
+                        </a>
+                        <a href="#" class="mobile-social-btn" id="mobileTelegramBtn">
+                            <span class="mobile-social-icon" style="background-image: url('icons/telegram.svg');"></span> Telegram
+                        </a>
+                        <a href="#" class="mobile-social-btn" id="mobileInstagramBtn">
+                            <span class="mobile-social-icon" style="background-image: url('icons/instagram.svg');"></span> Instagram
+                        </a>
+                    </div>
+                    <div class="mobile-copy-field">
+                        <span id="mobileWebsiteLink">https://itstaha.ir</span>
+                        <button class="mobile-copy-btn" id="mobileCopyLinkBtn">
+                            <span class="mobile-copy-icon" style="background-image: url('icons/copy.svg');"></span> Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footerText">
+            <div class="footer-wrapper">
+                <span class="footer-text">© 2026 Taha Rezaei — Backend Architect / Building resilient systems</span>
+                <button class="footer-scroll-btn" id="footerScrollBtn" aria-label="Scroll to top">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 19V5" />
+                        <path d="M5 12L12 5L19 12" />
+                    </svg>
+                </button>
+            </div>
+        </footer>
+
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

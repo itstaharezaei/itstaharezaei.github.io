@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taharezaeidev-afk.github.io/sitemap.xml

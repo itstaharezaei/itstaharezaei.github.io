@@ -1,0 +1,250 @@
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 800px) {
+    .header-wrapper { display: none; }
+    .mobile-header { display: flex; }
+
+    .main-container { padding: 0 0rem; }
+    
+    .hero-right { display: none; }
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 5rem;
+    }
+    .hero-left .typed-title { font-size: 2.5rem; }
+    .typed-wrapper { font-size: 1.3rem; }
+    .contact-info-row {
+        font-size: 0.7rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .hero-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    .scroll-top-btn {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .scroll-top-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* ABOUT MOBILE */
+    .about-content-new { flex-direction: column; }
+    .about-image-wrapper {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+    .rotating-border { max-width: 120px; }
+    .about-text {
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    .about-texts-wrapper { width: 100%; }
+    .about-line { width: 2px; }
+    .about-title,
+    .skills-title,
+    .services-title,
+    .contact-section-title,
+    .experience-title { font-size: 1.4rem; }
+
+    /* SKILLS MOBILE SLIDER */
+    .skills-section { overflow: hidden; position: relative; }
+    .skills-grid {
+        display: flex;
+        gap: 0;
+        scrollbar-width: none;
+        transition: transform 0.4s ease;
+        transform: translateX(0);
+        width: 100%;
+    }
+    .skills-grid::-webkit-scrollbar { display: none; }
+    .skill-card {
+        flex: 0 0 85%;
+        opacity: 1 !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+    .slider-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .slider-dot.active {
+        width: 24px;
+        border-radius: 4px;
+        background: #3b82f6;
+    }
+    body.rtl .skills-grid { direction: rtl; }
+    body.rtl .skill-card {
+        margin-right: 0;
+        margin-left: 16px;
+    }
+
+    /* SERVICES */
+    .services-slider-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .services-slider-wrapper::-webkit-scrollbar { display: none; }
+    .service-card { width: 280px; }
+
+    /* TIMELINE */
+    .timeline-item { width: 95%; }
+    .timeline-left { width: 40px; }
+    .timeline::before { left: 18px; }
+    body.rtl .timeline::before { right: 18px; }
+    .timeline-right { padding: 0.8rem; }
+    .project-title { font-size: 1rem; }
+
+    /* CONTACT MOBILE */
+    .contact-section-title { margin-bottom: 1rem; }
+    .contact-card,
+    .contact-card .contact-grid,
+    .contact-card .contact-form-side,
+    .contact-card .contact-pattern-side {
+        display: none !important;
+    }
+    .mobile-contact-box {
+        width: 88%;
+        display: block;
+        background: var(--bg-card);
+        border-radius: 28px;
+        padding: 1.2rem 1rem;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 5px 15px var(--shadow-color);
+    }
+    .mobile-social-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .mobile-social-btn {
+        background: var(--social-bg);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--social-border);
+        padding: 0.65rem 0.5rem;
+        border-radius: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: all 0.2s;
+        text-align: center;
+    }
+    .mobile-social-btn:hover {
+        border-color: #3b82f6;
+        transform: translateY(-2px);
+    }
+    .mobile-social-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: var(--icon-filter);
+    }
+    .mobile-copy-field {
+        background: var(--social-bg);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--social-border);
+        border-radius: 48px;
+        padding: 0.45rem 0.45rem 0.45rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        width: 93%;
+    }
+    .mobile-copy-field span {
+        color: var(--text-primary);
+        font-size: 0.75rem;
+        font-family: monospace;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .mobile-copy-btn {
+        background: #3b82f6;
+        border: none;
+        padding: 0.4rem 1rem;
+        border-radius: 40px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: white;
+        transition: all 0.2s;
+        flex-shrink: 0;
+    }
+    .mobile-copy-btn:hover { background: #2563eb; }
+    .mobile-copy-icon {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: var(--icon-filter);
+    }
+
+    .footer-scroll-btn {
+        width: 32px;
+        height: 32px;
+    }
+    .footer-scroll-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+    .footer-wrapper { gap: 0.8rem; }
+
+    .main-container,
+    .hero,
+    .about-section,
+    .skills-section,
+    .services-section,
+    .experience-section,
+    .contact-wrapper {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .about-texts {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+@media (min-width: 801px) {
+    .mobile-header,
+    .sidebar,
+    .overlay { display: none !important; }
+    .mobile-contact-box { display: none !important; }
+}
