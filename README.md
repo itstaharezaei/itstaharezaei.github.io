@@ -1,16 +1,26 @@
-## Hi there 👋
+# Taha Rezaei — Backend Architect & Systems Engineer
 
-<!--
-**itstaharezaei/itstaharezaei** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> **Crafting resilient backends, real‑time systems, and defense‑in‑depth architectures.**
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 👋 About Me
+
+I'm a backend architect who refuses to stay on the surface. I deeply understand event loops, race conditions, and defense in depth. I don't just write code — I build resilient systems.
+
+Currently diving deep into blockchain security, smart contract auditing, and consensus mechanisms. Always curious, always building.
+
+---
+
+## 🧠 What I Do
+
+| Area | Focus |
+| :--- | :--- |
+| **Backend Development** | Node.js, Express, WebSocket, microservices, REST/GraphQL APIs |
+| **Database & Caching** | PostgreSQL, MongoDB, Redis (indexing, sharding, caching strategies) |
+| **DevOps & Tools** | Docker, Linux, GitHub Actions, VPS/Cloud deployment |
+| **Security & Architecture** | Defense in Depth, Race Condition mitigation, Rate Limiting, Blockchain basics |
+
+---
+
+## 🛠️ Tech Stack
